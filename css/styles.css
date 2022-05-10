@@ -582,10 +582,11 @@ img {
   margin-right: 0px;
 }
 .footer-text-add {
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: 700;
+  font-size: 12px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
   margin-bottom: 20px;
   color: var(--footer-first-color);
 }
@@ -613,14 +614,50 @@ img {
 
 .footer-form {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-color: #2f303a .footer-btn-subscribe {
-  display: block;
+.footer-form-label {
+  /* display: block; */
   align-items: center;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 30px;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--footer-first-color);
+}
+
+.footer-input {
+  /* display: flex; */
+  align-items: center;
+  margin-right: 12px;
+  padding: 15px 16px;
+  width: 358px;
+  height: 50px;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: #2f303a;
+  outline: none;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.footer-input:focus {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.footer-btn-subscribe {
+  display: inline-flex;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  /* margin-right: 10px; */
+  margin-left: 12px;
   font-family: inherit;
   border-radius: 4px;
   border: none;
@@ -628,13 +665,20 @@ color: #2f303a .footer-btn-subscribe {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  padding: 10px 32px;
-  width: max-content;
+  padding: 10px 28px;
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
-
   color: var(--banner-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition-property: background-color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.footer-icon {
+  margin-left: 10px;
+  fill: var(--footer-first-color);
 }
 
 /*-----------------PAGE2--------------*/
@@ -816,10 +860,13 @@ color: #2f303a .footer-btn-subscribe {
   align-items: center;
   justify-content: center;
   fill: #000000;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  fill: var(--accent-color);
 }
 .is-hidden {
   opacity: 0;
@@ -854,6 +901,10 @@ color: #2f303a .footer-btn-subscribe {
 .modal-input:hover + .input-icon {
   fill: var(--accent-color);
 }
+.modal-input:focus + .input-icon,
+.modal-input:hover + .input-icon {
+  transform: translateY(-20px);
+}
 .modal-input-wrap {
   position: relative;
   margin-bottom: 10px;
@@ -867,15 +918,7 @@ color: #2f303a .footer-btn-subscribe {
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
-/* .modal-input-comments {
-  width: 100%;
-  height: 120px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  padding-left: 16px;
-  font-size: 12px;
-  color: rgba(117, 117, 117, 0.5);
-} */
+
 .modal-label {
   font-size: 12px;
   letter-spacing: 0.01em;
@@ -910,16 +953,17 @@ color: #2f303a .footer-btn-subscribe {
   pointer-events: none;
   visibility: hidden;
 }
-.input-chek:focus {
+/* .input-chek:focus {
   border-color: #212121;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-}
+} */
 .input-chek:checked + .check-text span {
   background-color: var(--accent-color);
   border: transparent;
 }
-.input-chek:focus + .check-text span {
+
+.input-chek:focus + .check-text .check-text-span {
   border-color: #212121;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14);
@@ -927,7 +971,6 @@ color: #2f303a .footer-btn-subscribe {
 .input-chek:checked + .check-text .icon-check {
   fill: #ffffff;
 }
-
 .check-text-span {
   width: 16px;
   height: 15px;
@@ -947,10 +990,10 @@ color: #2f303a .footer-btn-subscribe {
   border: 2px solid #212121;
   margin-right: 7px;
 } */
+
 .check-policy {
   color: var(--accent-color);
 }
-
 .modal-btn-send {
   display: block;
   align-items: center;

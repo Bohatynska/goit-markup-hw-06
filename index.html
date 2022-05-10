@@ -444,17 +444,20 @@
         </div>
         <div>
           <p class="footer-text-add">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
-
           <form class="footer-form">
-            <label for="footer-subs">E-mail</label>
+            <label for="footer-subs" class="footer-form-label"></label>
             <input
-              type="text"
+              type="email"
               class="footer-input"
               name="footer-subs"
+              placeholder="E-mail"
               id="footer-subs"
             />
             <button type="submit" class="footer-btn-subscribe">
               Подписаться
+              <svg class="footer-icon" width="24" height="24">
+                <use href="./images/sprite.svg#icon-icon"></use>
+              </svg>
             </button>
           </form>
         </div>
@@ -524,13 +527,13 @@
               name="policy"
               value="policy"
             />
-            <label for="input-chek" class="check-text">
+            <label class="check-text" for="input-chek">
               <span class="check-text-span">
                 <svg class="icon-check" width="11" height="8">
                   <use href="./images/sprite.svg#icon-check"></use>
                 </svg>
               </span>
-              Соглашаюсь с рассылкой и принимаю
+              Соглашаюсь с рассылкой и принимаю &nbsp
               <a href="" class="check-policy"> Условия договора</a>
             </label>
           </div>

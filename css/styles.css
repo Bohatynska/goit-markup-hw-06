@@ -569,7 +569,9 @@ img {
 .footer-list.link {
   text-decoration: none;
 }
-
+.footer-soc {
+  margin-right: 93px;
+}
 .footer-soc-list {
   display: flex;
 }
@@ -608,6 +610,33 @@ img {
   fill: #ffffff;
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
+
+.footer-form {
+  display: flex;
+}
+
+color: #2f303a .footer-btn-subscribe {
+  display: block;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  font-family: inherit;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  padding: 10px 32px;
+  width: max-content;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  color: var(--banner-color);
+}
+
 /*-----------------PAGE2--------------*/
 /*-----------------HERO--------------*/
 /*-----------------HERO FILTERS------*/
@@ -890,13 +919,13 @@ img {
   background-color: var(--accent-color);
   border: transparent;
 }
-.input-chek:checked + .check-text .icon-check {
-  fill: #ffffff;
-}
 .input-chek:focus + .check-text span {
   border-color: #212121;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+}
+.input-chek:checked + .check-text .icon-check {
+  fill: #ffffff;
 }
 
 .check-text-span {
